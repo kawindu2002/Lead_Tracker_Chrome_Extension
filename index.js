@@ -1,6 +1,7 @@
 
 let inputBtn = document.querySelector("#input-btn");
 const inputEl = document.querySelector("#input-el")
+const deleteBtn = document.getElementById("delete-btn")
 const ulEl = document.getElementById("ul-el")
 
 let myLeads = []
@@ -13,10 +14,9 @@ if (leadsFromLocalStorage) {
         renderLeads();
 }
 
-
 inputBtn.addEventListener("click",function(){
         if (inputEl.value == null || inputEl.value === ""){
-                alert("Please enter link");
+                alert("Can't accept empty data!");
         }else{
                 myLeads.push(inputEl.value);
                 inputEl.value = "";
@@ -28,6 +28,13 @@ inputBtn.addEventListener("click",function(){
         }
 
 });
+
+deleteBtn.addEventListener("dblclick", function() {
+        localStorage.clear()
+        myLeads = []
+        renderLeads();
+});
+
 
 function renderLeads(){
         let listItems = "";
