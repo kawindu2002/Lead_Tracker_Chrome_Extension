@@ -47,3 +47,20 @@ li {
 li a {
     color: #2E5CA3;
 }
+
+.rounded-alert {
+     border-radius: 20px;
+     font-family: 'Segoe UI', sans-serif;
+     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.alert-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.alert-button {
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
